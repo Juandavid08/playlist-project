@@ -7,6 +7,7 @@ import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
 import java.net.URI;
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/lists")
 public class ListaReproduccionController {
