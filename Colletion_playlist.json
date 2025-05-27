@@ -1,0 +1,81 @@
+{
+  "info": {
+    "name": "Playlist API",
+    "_postman_id": "1d124b21-f1b1-4cfb-867b-bd5bdfcb76d7",
+    "description": "Colección para probar la API de listas de reproducción",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Crear lista (POST /lists)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Favoritas\",\n  \"descripcion\": \"Mis canciones favoritas\",\n  \"canciones\": [\n    {\n      \"titulo\": \"Yellow\",\n      \"artista\": \"Coldplay\",\n      \"album\": \"Parachutes\",\n      \"anno\": \"2000\",\n      \"genero\": \"Rock\"\n    },\n    {\n      \"titulo\": \"Shape of You\",\n      \"artista\": \"Ed Sheeran\",\n      \"album\": \"Divide\",\n      \"anno\": \"2017\",\n      \"genero\": \"Pop\"\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/lists",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["lists"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener todas (GET /lists)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/lists",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["lists"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener por nombre (GET /lists/Favoritas)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/lists/Favoritas",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["lists", "Favoritas"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar por nombre (DELETE /lists/Favoritas)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/lists/Favoritas",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["lists", "Favoritas"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
