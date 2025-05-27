@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# 🎧 Frontend - Gestor de Playlists 🎵
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Interfaz web para crear, visualizar y eliminar listas de reproducción musicales. Esta aplicación está desarrollada con **React** y **Material UI**, conectándose a una API REST construida con Spring Boot.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🌐 Vista general de la aplicación
 
-### `npm start`
+A continuación se muestran capturas del funcionamiento del sistema.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🏠 Página principal - Listado de Playlists
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+> ![image](https://github.com/user-attachments/assets/ee68f8d8-eb03-4145-a2df-375473c50a03)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+- Muestra todas las listas creadas.
+- Cada item puede ser seleccionado para ver sus detalles.
+- Botón para **crear nueva lista**.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ➕ Crear nueva Playlist
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> ![image](https://github.com/user-attachments/assets/5536d3a0-33a8-4065-be32-cb869d6432f7)
 
-### `npm run eject`
+- Al hacer clic en "Crear nueva lista", se abre un formulario modal.
+- Se ingresan `nombre` y `descripción`.
+- Al guardar, se actualiza la lista automáticamente.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 📄 Detalles de una Playlist
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+> ![image](https://github.com/user-attachments/assets/6eb979f0-7f55-4557-a106-f6357d577d75)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+- Se muestra una tarjeta con el nombre y descripción de la lista.
+- Abajo, se despliega un listado de canciones asociadas.
+- Cada canción muestra:
+  - ID
+  - Título
+  - Artista
+  - Álbum
+  - Año
+  - Género
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 🗑️ Eliminar una Playlist
 
-### Code Splitting
+> ![image](https://github.com/user-attachments/assets/92f6ef61-34ec-4710-aaae-473e2c6b8e74)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+- Desde los detalles de la playlist, puedes eliminarla.
+- Una vez eliminada, se actualiza automáticamente el listado general.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## ⚙️ Tecnologías utilizadas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- React 18+
+- Material UI (MUI)
+- Axios (para consumir la API)
+- JavaScript moderno (ES6+)
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📦 Instalación y ejecución
 
-### Deployment
+Asegúrate de tener Node.js instalado.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+cd frontend
+npm install
+npm start
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
